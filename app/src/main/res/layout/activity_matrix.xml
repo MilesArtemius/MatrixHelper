@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.5"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <FrameLayout
+            android:id="@+id/imageViewLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.1"
+            android:background="@color/colorAccent" />
+
+        <TableLayout
+            android:id="@+id/matrix_container"
+            android:layout_weight="0.8"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+        </TableLayout>
+
+        <FrameLayout
+            android:id="@+id/imageViewRight"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.1"
+            android:background="@color/colorAccent" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_weight="0.475"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/signum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:text="Significator is:"
+            android:textColor="#000000"
+            android:layout_above="@+id/significator"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:id="@+id/significator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:text="not counted yet..."
+            android:layout_centerVertical="true"
+            android:textColor="#000000"
+            android:layout_alignLeft="@+id/signum"
+            android:layout_alignStart="@+id/signum" />
+    </RelativeLayout>
+
+    <com.google.android.gms.ads.AdView
+        android:layout_weight="0.025"
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        ads:adSize="SMART_BANNER"
+        ads:adUnitId="ca-app-pub-8903017894899762/4701790554" />
+</LinearLayout>
